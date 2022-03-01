@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Resource, Api
 
 import psycopg2
@@ -28,7 +28,7 @@ class GetTables(Resource):
 @api.resource("/")
 class HelloWorld(Resource):
     def get(self):
-        return {"hello": "world"}
+        return {"hello": "world", "service": "backend", "caller": request.remote_addr}
 
 
 if __name__ == "__main__":
