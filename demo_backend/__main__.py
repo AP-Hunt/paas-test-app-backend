@@ -33,4 +33,4 @@ class HelloWorld(Resource):
 
 if __name__ == "__main__":
     debug = False if DEBUG == "false" else True
-    app.run(debug=debug, port=PORT)
+    app.run(debug=debug, host="0.0.0.0", port=PORT)
