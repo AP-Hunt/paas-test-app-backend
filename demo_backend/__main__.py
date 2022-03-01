@@ -30,6 +30,11 @@ class HelloWorld(Resource):
     def get(self):
         return {"hello": "world", "service": "backend", "caller": request.remote_addr}
 
+@api.resource("/test")
+class Test(Resource):
+    def get(self):
+        return {"hello": "world", "service": "backend", "caller": request.remote_addr}
+
 
 if __name__ == "__main__":
     debug = False if DEBUG == "false" else True
