@@ -1,1 +1,1 @@
-web: poetry run python -m demo_backend
+web: python -m demo_backend
