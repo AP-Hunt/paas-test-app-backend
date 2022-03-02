@@ -1,0 +1,6 @@
+runtime: python39
+entrypoint: python3 -m demo_backend
+service: backend
+env_variables:
+  DEBUG: yes
+  DATABASE_URL: postgres://demouser:demopass@/postgres?host=/cloudsql/paas-test-app-thing:europe-west1:paas-test-app-postgres/
